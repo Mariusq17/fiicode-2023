@@ -1,3 +1,93 @@
+:root {
+    --padding: 30px;
+    --sidebar-gap: 4rem;
+    --gap: calc(var(--sidebar-gap) / 4);
+    --black: #191919;
+    --grey: rgb(70, 70, 70);
+    --font-size: 16px;
+    --white-opacied: rgba(255, 255, 255, 0.5);
+}
+
 .sidebar {
-    background-color: red;
+    height: 100vh;
+    max-width: 325px;
+    width: 80%;
+    background-color: khaki;
+    position: fixed;
+    top: 0; left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: var(--padding);
+    gap: var(--sidebar-gap);
+    background-color: var(--white-opacied);
+    backdrop-filter: blur(3px);
+}
+.sidebar a {
+    text-decoration: none;
+    color: var(--black);
+    display: block;
+}
+
+.sidebar .profile-section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--gap);
+    --white-opacied: rgba(255, 255, 255, 0.75);
+    background-color: var(--white-opacied);
+    padding: 10px;
+    border-radius: 1rem;
+    width: 100%;
+}
+.sidebar .sidebar-user-infos h3 {
+    --custom-font-size: calc(var(--font-size) * 1.25);
+    font-size: var(--custom-font-size);
+}
+.sidebar .sidebar-user-infos h4 {
+    color: var(--grey);
+    --custom-font-size: calc(var(--font-size) * 1);
+    font-size: var(--custom-font-size);
+}
+.sidebar-user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sidebar-menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--gap) * 1.5);
+    padding: 10px;
+}
+.sidebar-menu-group {
+    /* background-color: yellowgreen; */
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+.sidebar-menu-group h4{
+    --custom-font-size: calc(var(--font-size) * 1.25);
+    font-size: var(--custom-font-size);
+}
+.sidebar-menu-group .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --custom-font-size: calc(var(--font-size) * 1.25);
+    font-size: var(--custom-font-size);
+    width: var(--custom-font-size);
+    /* height: var(--custom-font-size); */
+}
+.sidebar-log-out-section {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    padding: 10px;
+    color: var(--black);
+    cursor: pointer;
+    margin-top: 1rem;
 }
