@@ -134,5 +134,5 @@
     --custom-font-size: calc(var(--font-size) * 1.5);
     font-size: var(--custom-font-size);
     cursor: pointer;
-    color: var(--black);
+    color: var(--color);
 }
