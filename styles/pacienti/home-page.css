@@ -9,3 +9,14 @@ body {
     background-color: transparent;
     background-color: royalblue;
 }
+
+.light-theme {
+    --color: #191919;
+    --grey: rgb(70, 70, 70);
+    --background-opacied: rgba(255, 255, 255, 0.35);
+}
+.dark-theme {
+    --color: #DDD;
+    --grey: rgb(70, 70, 70);
+    --background-opacied: rgba(0, 0, 0, 0.5);
+}

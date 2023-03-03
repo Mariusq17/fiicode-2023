@@ -1,6 +1,10 @@
 <div class="sidebar">
-    <!-- <div class="close-sidebar"></div>
-    <div class="open-sidebar"></div> -->
+    <div class="close-sidebar active">
+        <i class="icon fa-solid fa-xmark"></i>
+    </div>
+    <div class="open-sidebar">
+        <i class="icon fa-solid fa-bars"></i>
+    </div>
     <div class="profile-section">
       <img
         src="../../images/user-default-image.png"
@@ -45,7 +49,7 @@
     </a>
   </div>  
   <div class="sidebar-log-out-wrapper">
-      <div class="sidebar-log-out-section">
+      <div class="sidebar-log-out-section" id='changeTheme'>
             <i class="fa-solid fa-moon"></i>
             <h4>Tema intunecata</h4>
         </div>
