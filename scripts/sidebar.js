@@ -11,14 +11,24 @@ themeChanger.addEventListener('click', changeTheme);
 function modifySidebar() {
     sidebar.classList.toggle('close');
 }
+
+if (localStorage.getItem('theme') === "dark-theme") {
+    body.classList.add("dark-theme");
+    themeChanger.firstElementChild.classList.add('fa-sun');
+    themeChanger.firstElementChild.classList.remove('fa-moon');
+    themeChanger.lastElementChild.innerText = 'Tema luminoasa';
+}
 function changeTheme() {
-    if(body.classList.contains('light-theme')) {
-        body.classList.add('dark-theme');
-        body.classList.remove('light-theme');
-        localStorage.addItem("theme", "dark-theme");
+    body.classList.toggle("dark-theme");
+    if(localStorage.getItem("theme") === 'dark-theme') {
+        localStorage.setItem('theme', 'light-theme');
+        themeChanger.firstElementChild.classList.remove('fa-sun');
+        themeChanger.firstElementChild.classList.add('fa-moon');
+        themeChanger.lastElementChild.innerText = 'Tema intunecata';
     } else {
-        body.classList.add('light-theme');
-        body.classList.remove('dark-theme');
-        localStorage.addItem("theme", "light-theme");
+        localStorage.setItem('theme', 'dark-theme');
+        themeChanger.firstElementChild.classList.add('fa-sun');
+        themeChanger.firstElementChild.classList.remove('fa-moon');
+        themeChanger.lastElementChild.innerText = 'Tema luminoasa';
     }
 }

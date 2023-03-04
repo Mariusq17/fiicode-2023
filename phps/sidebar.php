@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="sidebar close">
     <div class="close-sidebar active">
         <i class="icon fa-solid fa-xmark"></i>
     </div>

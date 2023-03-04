@@ -5,15 +5,15 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-color: transparent;
-    background-color: royalblue;
-}
-
-.light-theme {
+:root {
     --color: #191919;
     --grey: rgb(70, 70, 70);
     --background-opacied: rgba(255, 255, 255, 0.35);
+}
+
+body {
+    background-color: transparent;
+    background-color: royalblue;
 }
 .dark-theme {
     --color: #DDD;

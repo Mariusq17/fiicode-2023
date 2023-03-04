@@ -17,7 +17,7 @@
     <!-- Scripts -->
     <script src="../../scripts/sidebar.js" defer></script>
 </head>
-<body class="dark-theme">
+<body class="light-theme">
     <?php include "../sidebar.php" ?>
 </body>
 </html>
