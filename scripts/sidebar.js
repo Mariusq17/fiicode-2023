@@ -8,10 +8,6 @@ closeSidebarBtn.addEventListener('click', modifySidebar);
 openSidebarBtn.addEventListener('click', modifySidebar);
 themeChanger.addEventListener('click', changeTheme);
 
-function modifySidebar() {
-    sidebar.classList.toggle('close');
-}
-
 if (localStorage.getItem('theme') === "dark-theme") {
     body.classList.add("dark-theme");
     themeChanger.firstElementChild.classList.add('fa-sun');
@@ -32,3 +28,7 @@ function changeTheme() {
         themeChanger.lastElementChild.innerText = 'Tema luminoasa';
     }
 }
+function modifySidebar() {
+    sidebar.classList.toggle('close');
+}
+

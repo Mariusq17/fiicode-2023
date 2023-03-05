@@ -9,14 +9,38 @@
     --color: #191919;
     --grey: rgb(70, 70, 70);
     --background-opacied: rgba(255, 255, 255, 0.35);
+    --background-color1: #7EE8FA;
+    --background-color2: #748eff;
+    --background-color3: #f0a2ad;
 }
 
 body {
-    background-color: transparent;
-    background-color: royalblue;
+    /* background: linear-gradient(-45deg, #ffdb3b, #748eff, #b02772); */
+    background: linear-gradient(-45deg, var(--background-color1), 
+    var(--background-color2), var(--background-color3));
+    
+    background-size: 400% 400%;
+    animation: gradient-bg 25s ease infinite;
 }
+
+@keyframes gradient-bg {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .dark-theme {
     --color: #DDD;
     --grey: rgb(70, 70, 70);
     --background-opacied: rgba(0, 0, 0, 0.5);
+    --background-color1: #0e1b31;
+    --background-color2: #34133a;
+    --background-color3: #501111;
 }
+
