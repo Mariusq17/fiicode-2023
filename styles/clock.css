@@ -1,0 +1,97 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #D9D7DD;
+  }
+  :root {
+    --shadow-color: 0, 0, 0;
+    --clock-back-color: #ddd;
+    --clock-ace-color: #121212;
+    --clock-size: 200px;
+    --hour-height: calc(var(--clock-size) / 3.5);
+    --minute-height: calc(var(--clock-size) / 2.5);
+    --second-height: calc(var(--clock-size) / 3.8);
+  }
+  
+.dark-theme {
+  --clock-back-color: #121212;
+  --clock-ace-color: #ddd;
+  --shadow-color: 255, 255, 255;
+}
+
+  .clock {
+    border-radius: 100%;
+    background: var(--clock-back-color);
+    font-family: "Montserrat";
+    border: 5px solid var(--clock-back-color);;
+    box-shadow: inset 2px 3px 8px 0 rgba(var(--shadow-color), 0.1);
+  }
+  
+  .wrap {
+    /* overflow: hidden; */
+    position: relative;
+    width: var(--clock-size);
+    height: var(--clock-size);
+    border-radius: 100%;
+  }
+  
+  .minute,
+  .hour {
+    position: absolute;
+    height: var(--hour-height);
+    width: 6px;
+    margin: auto;
+    top: -27%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--clock-ace-color);
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    box-shadow: 0 0 10px 0 rgba(var(--shadow-color), 0.4);
+    z-index: 1;
+  }
+  
+  .minute {
+    position: absolute;
+    height: var(--minute-height);
+    width: 4px;
+    top: -38%;
+    left: 0;
+    box-shadow: 0 0 10px 0 rgba(var(--shadow-color), 0.4);
+    transform: rotate(90deg);
+  }
+  
+  .second {
+    position: absolute;
+    height: var(--second-height);
+    width: 2px;
+    margin: auto;
+    top: -26%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 4px;
+    background: #FF4B3E;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+  
+  .dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 100px;
+    background: var(--clock-back-color);
+    border: 2px solid var(--clock-ace-color);;
+    border-radius: 100px;
+    margin: auto;
+    z-index: 1;
+  }
