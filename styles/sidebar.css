@@ -2,7 +2,7 @@
     --padding: 30px;
     --sidebar-gap: 4rem;
     --gap: calc(var(--sidebar-gap) / 4);
-    --font-size: 16px;
+    --closed-sidebar-size: 100px;
 }
 
 .sidebar {
@@ -19,9 +19,9 @@
     gap: var(--sidebar-gap);
     background-color: var(--background-opacied);
     backdrop-filter: blur(3px);
-    position: relative;
     transition: 300ms;
     white-space: nowrap;
+    z-index: 100;
 }
 .sidebar a {
     text-decoration: none;
@@ -103,7 +103,7 @@
     color: var(--color);
 }
 .sidebar.close {
-    max-width: 100px;
+    max-width: var(--closed-sidebar-size);
     align-items: center;
     padding: var(--padding) 0;
 }
